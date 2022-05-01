@@ -8,7 +8,6 @@ LATA_4 = 0.5
 litros_por_metro = 5.0
 
 #IMPUT
-
 area_a_ser_pintada = entrada.area_paredes()
 print(area_a_ser_pintada)
 litros_a_serem_usados = float(area_a_ser_pintada / litros_por_metro)
@@ -30,9 +29,7 @@ numero_latas_1l = math.ceil(litros_faltantes / LATA_4)
 litros_faltantes = litros_faltantes % LATA_4
 
 
-print(f'Area a ser Pintada: {area_a_ser_pintada}')
-print(f'Litros necessários: {litros_a_serem_usados}')
-
+print(f'Area a ser Pintada: {area_a_ser_pintada} e litros necessários: {litros_a_serem_usados}')
 print(f'Latas de 18L: {numero_latas_18l}')
 print(f'Latas de 3.6L: {numero_latas_3l}')
 print(f'Latas de 2.5L: {numero_latas_2l}')
