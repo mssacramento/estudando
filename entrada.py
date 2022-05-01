@@ -11,16 +11,18 @@ def area_paredes():
         largura = float(input(f"Digite a largura da {cont}ª parede: "))
         metros = altura * largura
         if metros < 1 or metros > 15 or largura < 0 or altura < 0:
-            print('A metragem da parede em m2 não poderá ser menor que 1m2 ou maior que 15m2')
+            print('A metragem da parede em m2 não poderá ser menor que 1m2 ou maior que 15m2.')
             continue
         else:
             tot_janelas = int(input(f"Digite a quantidade de janelas da {cont}ª parede: "))
             tot_portas = int(input(f"Digite a quantidade de portas da {cont}ª parede: "))
             area_vazia = (tot_janelas * janela) + (tot_portas * porta)
             if area_vazia > (0.5 * metros):
-                print('A metragem da(s) janala(s) e/ou porta(s) não poderá ser maior que 50% da parede')
+                print('A metragem da(s) janala(s) e/ou porta(s) não poderá ser maior que 50% da parede.')
                 continue
-
+            if tot_portas > 0 and altura < 2.20:
+                print('A Altura da parede precisa ser no mínimo 30cm maior que a porta.')
+                continue
             else:
                 parede_largura.append(largura)
                 parede_altura.append(altura)
